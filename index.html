@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد العربي - Mohamed Al-Araby</title>
+    <link rel="stylesheet" href="style.css">
+ <link rel="icon" type="image/png" href="Logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <span class="logo-brand">MA</span>
+            <ul class="nav-links">
+                <li><a href="#hero" data-ar="عني" data-en="About">عني</a></li>
+                <li><a href="#gallery" data-ar="الصور" data-en="Gallery">الصور</a></li>
+                <li><a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a></li>
+                <li><a href="#social" data-ar="حساباتي" data-en="Social">حساباتي</a></li>
+                <li><a href="#gaming" data-ar="الألعاب" data-en="Gaming">الألعاب</a></li>
+                <li><a href="#card" data-ar="بطاقتي" data-en="Card">بطاقتي</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-btn" title="تبديل المظهر">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-decorations">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="profile-wrapper">
+                <div class="profile-pic" id="profilePic"></div>
+                <div class="status-badge">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+            </div>
+
+            <h1 class="hero-name">محمد العربي</h1>
+            <p class="hero-name-en">Mohamed Al-Araby</p>
+            
+            <div class="hero-badge">
+                <i class="fas fa-code"></i>
+                <span data-ar="طالب علوم حاسب • Computer Science Student" data-en="Computer Science Student • طالب علوم حاسب">طالب علوم حاسب • Computer Science Student</span>
+            </div>
+
+            <p class="hero-period">2026 — 2027</p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <span>تواصل معي</span>
+                </a>
+                <a href="#gallery" class="btn btn-secondary">
+                    <span>صوري</span>
+                </a>
+                <a href="#social" class="btn btn-ghost">
+                    <span>حساباتي</span>
+                </a>
+            </div>
+        </div>
+
+        <button class="scroll-indicator" onclick="scrollTo('about')">
+   <!--     <i class="fas fa-chevron-down"></i>  -->
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="عن محمد" data-en="About Mohamed">عن محمد</h2>
+                <p class="section-subtitle" data-ar="About Mohamed" data-en="عن محمد">About Mohamed</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="glass-card">
+                    <h3 class="card-title">
+                        <i class="fas fa-sparkles"></i>
+                        <span data-ar="معلومات شخصية" data-en="Personal Info">معلومات شخصية</span>
+                    </h3>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <span class="info-icon">👤</span>
+                            <div>
+                                <p class="info-label" data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</p>
+                                <p class="info-value">محمد العربي / Mohamed Al-Araby</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📅</span>
+                            <div>
+                                <p class="info-label" data-ar="تاريخ الميلاد" data-en="Birth Date">تاريخ الميلاد</p>
+                                <p class="info-value">24 نوفمبر 2006</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎓</span>
+                            <div>
+                                <p class="info-label" data-ar="التخصص" data-en="Major">التخصص</p>
+                                <p class="info-value" data-ar="طالب علوم حاسب" data-en="Computer Science Student">طالب علوم حاسب</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📆</span>
+                            <div>
+                                <p class="info-label" data-ar="الفترة الدراسية" data-en="Study Period">الفترة الدراسية</p>
+                                <p class="info-value">2026 — 2027</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 class="card-title">
+                        <i class="fas fa-code"></i>
+                        <span data-ar="من أنا؟" data-en="Who am I?">من أنا؟</span>
+                    </h3>
+                    
+                    <div class="bio-content">
+                        <p data-ar="أنا محمد العربي، طالب متحمس في مجال علوم الحاسب، أسعى دائماً لتطوير مهاراتي في عالم التقنية والبرمجة." data-en="I am Mohamed Al-Araby, an enthusiastic student in computer science, always seeking to develop my skills in technology and programming.">أنا محمد العربي، طالب متحمس في مجال علوم الحاسب، أسعى دائماً لتطوير مهاراتي في عالم التقنية والبرمجة.</p>
+                        <p data-ar="أحب استكشاف أحدث التقنيات وبناء مشاريع مبدعة تجمع بين الابتكار والجمال. شغفي بالبرمجة يدفعني للتعلم المستمر." data-en="I love exploring the latest technologies and building creative projects that combine innovation and beauty. My passion for programming drives me to continuous learning.">أحب استكشاف أحدث التقنيات وبناء مشاريع مبدعة تجمع بين الابتكار والجمال. شغفي بالبرمجة يدفعني للتعلم المستمر.</p>
+                        <p data-ar="بالإضافة إلى الدراسة، أهوى الألعاب الإلكترونية وأقضي وقتاً ممتعاً في مجتمعات الألعاب كـ PUBG وRoblox." data-en="In addition to studying, I enjoy playing video games and spending time in gaming communities like PUBG and Roblox.">بالإضافة إلى الدراسة، أهوى الألعاب الإلكترونية وأقضي وقتاً ممتعاً في مجتمعات الألعاب كـ PUBG وRoblox.</p>
+                    </div>
+
+                    <div class="skills-tags">
+                        <span class="skill-tag">برمجة</span>
+                        <span class="skill-tag">تطوير ويب</span>
+                        <span class="skill-tag">علوم حاسب</span>
+                        <span class="skill-tag">تقنية</span>
+                        <span class="skill-tag">ألعاب</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="الصور الشخصية" data-en="Personal Photos">الصور الشخصية</h2>
+                <p class="section-subtitle" data-ar="Personal Photos" data-en="My Personal Photos">My Personal Photos</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div id="galleryContainer" class="gallery-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</h2>
+                <p class="section-subtitle" data-ar="Get in Touch" data-en="تواصل معي">Get in Touch</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="glass-card contact-card">
+                    <div class="contact-icon phone-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <p class="contact-label" data-ar="رقم الهاتف" data-en="Phone Number">رقم الهاتف</p>
+                    <a href="tel:01228342877" class="contact-value">01228342877</a>
+                </div>
+
+                <div class="glass-card contact-card">
+                    <div class="contact-icon email-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <p class="contact-label" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</p>
+                    <a href="mailto:hfzbt2006@gmail.com" class="contact-value">hfzbt2006@gmail.com</a>
+                </div>
+
+                <div class="glass-card contact-card">
+                    <div class="contact-icon whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <p class="contact-label" data-ar="واتس اب شخصي" data-en="Personal WhatsApp">واتس اب شخصي</p>
+                    <a href="https://wa.me/201116836620" target="_blank" class="contact-value">01116836620</a>
+                </div>
+
+                <div class="glass-card contact-card">
+                    <div class="contact-icon whatsapp-icon business">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <p class="contact-label" data-ar="واتس اب أعمال" data-en="Business WhatsApp">واتس اب أعمال</p>
+                    <a href="https://wa.me/201228342877" target="_blank" class="contact-value">01228342877</a>
+                </div>
+
+                <div class="glass-card contact-card">
+                    <div class="contact-icon birthday-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <p class="contact-label" data-ar="تاريخ الميلاد" data-en="Birthday">تاريخ الميلاد</p>
+                    <p class="contact-value">24 نوفمبر 2006</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section id="social" class="section social-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="حساباتي" data-en="My Social">حساباتي</h2>
+                <p class="section-subtitle" data-ar="My Social Media" data-en="حساباتي">My Social Media</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://www.instagram.com/dev_mohamedtarek" target="_blank" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p class="social-handle">@dev_mohamedtarek</p>
+                    <span class="social-link" data-ar="زيارة" data-en="Visit">زيارة</span>
+                </a>
+
+                <a href="https://www.tiktok.com/@dev_mohamed3" target="_blank" class="social-card tiktok">
+                    <div class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p class="social-handle">@dev_mohamed3</p>
+                    <span class="social-link" data-ar="زيارة" data-en="Visit">زيارة</span>
+                </a>
+
+                <a href="https://www.roblox.com/users/4677625913/profile" target="_blank" class="social-card roblox">
+                    <div class="social-icon">
+                        <i class="fab fa-roblox"></i>
+                    </div>
+                    <h3>Roblox</h3>
+                    <p class="social-handle">4677625913</p>
+                    <span class="social-link" data-ar="زيارة" data-en="Visit">زيارة</span>
+                </a>
+
+                <a href="https://www.facebook.com/share/1CWHHXN9s7/" target="_blank" class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p class="social-handle">Mohamed Al-Araby</p>
+                    <span class="social-link" data-ar="زيارة" data-en="Visit">زيارة</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Section -->
+    <section id="gaming" class="section gaming-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="الألعاب" data-en="Gaming">الألعاب</h2>
+                <p class="section-subtitle" data-ar="Gaming" data-en="الألعاب">Gaming</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="gaming-grid">
+                <div class="glass-card gaming-card">
+                    <div class="gaming-header">
+                        <div class="gaming-icon pubg">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div>
+                            <h3>PUBG Mobile</h3>
+                            <p class="gaming-subtitle">PlayerUnknown's Battlegrounds</p>
+                        </div>
+                    </div>
+                    <div class="gaming-id-box">
+                        <p class="gaming-label" data-ar="PUBG ID" data-en="PUBG ID">PUBG ID</p>
+                        <p class="gaming-id">52435154933</p>
+                        <button class="copy-btn" onclick="copyText('52435154933', 'pubg-id')">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="glass-card gaming-card">
+                    <div class="gaming-header">
+                        <div class="gaming-icon roblox">
+                            <i class="fab fa-roblox"></i>
+                        </div>
+                        <div>
+                            <h3>Roblox</h3>
+                            <p class="gaming-subtitle">User ID: 4677625913</p>
+                        </div>
+                    </div>
+                    <div class="gaming-id-box">
+                        <p class="gaming-label" data-ar="رابط الملف الشخصي" data-en="Profile Link">رابط الملف الشخصي</p>
+                        <a href="https://www.roblox.com/users/4677625913/profile" target="_blank" class="gaming-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            roblox.com/users/4677625913
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Card Section -->
+    <section id="card" class="section card-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="بطاقتي الشخصية" data-en="My Business Card">بطاقتي الشخصية</h2>
+                <p class="section-subtitle" data-ar="My Business Card" data-en="بطاقتي الشخصية">My Business Card</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="card-container">
+                <div id="businessCard" class="business-card">
+                    <div class="card-pattern"></div>
+                    <div class="card-blobs">
+                        <div class="card-blob blob-top"></div>
+                        <div class="card-blob blob-bottom"></div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-left">
+                            <div class="card-avatar" id="cardAvatar"></div>
+                            <h3 class="card-name">محمد العربي</h3>
+                            <p class="card-name-en">Mohamed Al-Araby</p>
+                            
+                            <div class="card-badge">
+                                <i class="fas fa-code"></i>
+                                <span data-ar="طالب علوم حاسب" data-en="CS Student">طالب علوم حاسب</span>
+                            </div>
+
+                            <div class="card-info">
+                                <div class="card-info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>01228342877</span>
+                                </div>
+                                <div class="card-info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>hfzbt2006@gmail.com</span>
+                                </div>
+                                <div class="card-info-item">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>@dev_mohamedtarek</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-qr">
+                            <div id="qrcode"></div>
+                            <p class="qr-text" data-ar="امسح للزيارة" data-en="Scan to visit">امسح للزيارة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="downloadCardBtn" class="btn btn-primary" onclick="downloadCard()">
+                    <i class="fas fa-download"></i>
+                    <span data-ar="تحميل البطاقة" data-en="Download Card">تحميل البطاقة</span>
+                </button>
+
+                <p class="card-note" data-ar="الباركود يأخذ أي شخص مباشرة لموقعك عند مسحه" data-en="QR code takes anyone directly to your site when scanned">الباركود يأخذ أي شخص مباشرة لموقعك عند مسحه</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightboxImg" src="" alt="">
+        <button class="lightbox-nav prev" onclick="prevGalleryImage()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav next" onclick="nextGalleryImage()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-brand">محمد العربي</p>
+            <p class="footer-subtitle">Mohamed Al-Araby • Computer Science Student</p>
+            <div class="footer-links">
+                <a href="mailto:hfzbt2006@gmail.com">hfzbt2006@gmail.com</a>
+                <span>•</span>
+                <a href="https://instagram.com/dev_mohamedtarek" target="_blank">@dev_mohamedtarek</a>
+                <span>•</span>
+                <a href="https://tiktok.com/@dev_mohamed3" target="_blank">@dev_mohamed3</a>
+            </div>
+            <p class="footer-copyright">&copy; <span id="year">2026</span> Mohamed Al-Araby. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
